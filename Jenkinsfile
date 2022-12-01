@@ -1,4 +1,5 @@
-    agent any
+pipeline{    
+  agent any
     stages{
         stage('source code checkout'){
            steps{
@@ -7,8 +8,8 @@
            }
         }
         stage('test'){
-            steps{
-                junit '/var/lib/jenkins/workspace/UbotJenkinsIntegeration_uBot_test_data_2022-11-25T09_00_15.xml'
+           steps{
+               junit '/var/lib/jenkins/workspace/UbotJenkinsIntegeration_uBot_test_data_2022-11-25T09_00_15.xml'
             }
         }
     }
