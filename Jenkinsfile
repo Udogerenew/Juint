@@ -9,7 +9,7 @@ pipeline{
         }
         stage('test'){
            steps{
-               sh 'cp -r /var/lib/jenkins/workspace/UbotJenkinsIntegeration_uBot_test_data_2022-11-25T09_00_15.xml $WORKSPACE/test-results'
+               sh 'cp -r /var/lib/jenkins/workspace/log.xml $WORKSPACE/test-results'
                junit '**/test-results/**/*.xml'
             }
         }
