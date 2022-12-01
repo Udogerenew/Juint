@@ -10,7 +10,7 @@ pipeline{
         stage('test'){
            steps{
                sh 'cp -r /var/lib/jenkins/workspace/log.xml $WORKSPACE/test-results'
-               junit '**/test-results/**/*.xml'
+               junit allowEmptyResults: true, testResults: "${WORKSPACE}/test-results/*.xml"
             }
         }
     }
