@@ -9,7 +9,8 @@ pipeline{
         }
         stage('test'){
            steps{
-               junit allowEmptyResults: true, testResults: "${WORKSPACE}/log.xml"
+//               junit allowEmptyResults: true, testResults: "${WORKSPACE}/log.xml"
+               junit skipPublishingChecks: true, testResults: '**/UbotJenkinsIntegeration_uBot_test_data_*.xml'
             }
         }
     }
