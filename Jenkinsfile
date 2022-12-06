@@ -10,13 +10,13 @@ pipeline{
         stage('test'){
            steps{
 //               junit allowEmptyResults: true, testResults: "${WORKSPACE}/log.xml"
-                	 	       publishHTML (target: [
+                	    publishHTML (target: [
 	 	            allowMissing: false,
 	 	            alwaysLinkToLastBuild: false,
 	 	            keepAll: true,
 	 	            reportDir: "${workspace}",
 	 	            reportFiles: "*.html",
-	 	            reportName: "AFT report"])
+	 	            reportName: "Test_report"])
                junit skipPublishingChecks: true, testResults: '*.xml'
             }
         }
