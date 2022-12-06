@@ -9,7 +9,7 @@ pipeline{
         }
         stage('test'){
            steps{
-		  'sh 'printenv''
+		  sh 'printenv'
 //               junit allowEmptyResults: true, testResults: "${WORKSPACE}/log.xml"
                 	    publishHTML (target: [
 	 	            allowMissing: false,
