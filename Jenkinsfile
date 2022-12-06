@@ -9,6 +9,7 @@ pipeline{
         }
         stage('test'){
            steps{
+		   sh '$workspace'
 //               junit allowEmptyResults: true, testResults: "${WORKSPACE}/log.xml"
                 	    publishHTML (target: [
 	 	            allowMissing: false,
