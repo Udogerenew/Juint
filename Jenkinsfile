@@ -11,7 +11,6 @@ pipeline{
         }
         stage('test'){
            steps{
-		  sh 'printenv'
 		   sh 'unzip test-output_2022-12-06T06_35_30.zip'
 //               junit allowEmptyResults: true, testResults: "${WORKSPACE}/log.xml"
                 	    publishHTML (target: [
